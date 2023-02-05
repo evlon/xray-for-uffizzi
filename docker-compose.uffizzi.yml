@@ -10,9 +10,7 @@ services:
       resources:
         limits:
           memory: 4000M
-    environment:
-      UUID: afd4eb38-b100-4821-b3b3-8b7394bedf77
-      
+
     restart: always
     ports:
       - "80:80"
@@ -24,16 +22,3 @@ services:
 volumes:
   data:
 
-secrets:
-  UUID:
-    external: true
-    name: "UUID"
-  NEZHA_SERVER:
-    external: true
-    name: "NEZHA_SERVER"
-  NEZHA_PORT:
-    external: true
-    name: "NEZHA_PORT"  
-  NEZHA_KEY:
-    external: true
-    name: "NEZHA_KEY"
