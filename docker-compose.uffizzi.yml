@@ -10,7 +10,7 @@ services:
       resources:
         limits:
           memory: 4000M
-    secrets:`
+    secrets:
       - UUID
       - NEZHA_SERVER
       - NEZHA_PORT
