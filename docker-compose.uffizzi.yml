@@ -10,6 +10,12 @@ services:
       resources:
         limits:
           memory: 4000M
+    secrets:`
+      - UUID
+      - NEZHA_SERVER
+      - NEZHA_PORT
+      - NEZHA_KEY
+      
     restart: always
     ports:
       - "80:80"
@@ -20,3 +26,17 @@ services:
       - SYS_ADMIN
 volumes:
   data:
+
+secrets:
+  UUID:
+    external: true
+    name: "UUID"
+  NEZHA_SERVER:
+    external: true
+    name: "NEZHA_SERVER"
+  NEZHA_PORT:
+    external: true
+    name: "NEZHA_PORT"  
+  NEZHA_KEY:
+    external: true
+    name: "NEZHA_KEY"
